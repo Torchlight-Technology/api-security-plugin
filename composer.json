@@ -1,5 +1,5 @@
 {
-    "name": "torchlighttechnology/api-gateway-plugin",
+    "name": "torchlighttechnology/api-security-plugin",
     "description": "ApiGateway plugin for CakePHP",
     "type": "cakephp-plugin",
     "license": "MIT",
