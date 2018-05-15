@@ -51,7 +51,7 @@ class AwsAuthenticatorComponent extends Component
                 }
                 //debug($results);
                 foreach($results as $awsApiKey) {
-                    if($awsApiKey['value'] == $clientApiKey) {
+                    if($awsApiKey['enabled'] === true && $awsApiKey['value'] == $clientApiKey) {
                         $authorized = true;
                         break;
                     }
