@@ -37,21 +37,6 @@ class EndPointsController extends AppController
         $this->set(compact('endPoints'));
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id End Point id.
-     * @return \Cake\Http\Response|void
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $endPoint = $this->EndPoints->get($id, [
-            'contain' => []
-        ]);
-
-        $this->set('endPoint', $endPoint);
-    }
 
     /**
      * Add method
@@ -100,30 +85,7 @@ class EndPointsController extends AppController
         $this->set(compact('resources', 'endPoints'));
     }
 
-    // /**
-    //  * Edit method
-    //  *
-    //  * @param string|null $id End Point id.
-    //  * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-    //  * @throws \Cake\Network\Exception\NotFoundException When record not found.
-    //  */
-    // public function edit($id = null)
-    // {
-    //     $endPoint = $this->EndPoints->get($id, [
-    //         'contain' => []
-    //     ]);
-    //     if ($this->request->is(['patch', 'post', 'put'])) {
-    //         $endPoint = $this->EndPoints->patchEntity($endPoint, $this->request->getData());
-    //         if ($this->EndPoints->save($endPoint)) {
-    //             $this->Flash->success(__('The end point has been saved.'));
-
-    //             return $this->redirect(['action' => 'index']);
-    //         }
-    //         $this->Flash->error(__('The end point could not be saved. Please, try again.'));
-    //     }
-    //     $this->set(compact('endPoint'));
-    // }
-
+    
     /**
      * Delete method
      *

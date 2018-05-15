@@ -42,8 +42,8 @@ class EndPointsFixture extends TestFixture
         $this->records = [
             [
                 'id' => 1,
-                'controller' => 'Lorem ipsum dolor sit amet',
-                'method' => 'Lorem ipsum dolor sit amet',
+                'controller' => 'Pages',
+                'method' => 'display',
                 'created' => '2018-05-01 13:48:20',
                 'modified' => '2018-05-01 13:48:20'
             ],

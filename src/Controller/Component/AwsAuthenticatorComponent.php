@@ -14,8 +14,6 @@ class AwsAuthenticatorComponent extends Component
     public function beforeFilter(Event $event) {
         // Check to see if requested endpoint is one under ApiGateway control
         $request = $event->getSubject()->request;
-        //debug($request->getParam('controller'));
-        //debug($request->getParam('action'));
         $controller = $request->getParam('controller');
         $method = $request->getParam('action');
 
@@ -30,7 +28,6 @@ class AwsAuthenticatorComponent extends Component
             $authorized = false;
 
             if(!empty($apiKey)) {
-                //debug($apiKey);
                 $clientApiKey = $apiKey[0];
 
                 $results = Cache::read('aws', 'api-keys');
