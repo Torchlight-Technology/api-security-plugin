@@ -8,7 +8,7 @@ $redisServer = env('REDIS_SERVER', 'localhost');
 
 $prefix = 'apigateway_';
 
-Cache::config('methods', [
+Cache::setConfig('methods', [
     'engine' => $redisEngine,
     'server' => $redisServer,
     'duration' => '+4 week',
@@ -16,7 +16,7 @@ Cache::config('methods', [
     'prefix' => $prefix
 ]);
 
-Cache::config('api-keys', [
+Cache::setConfig('api-keys', [
     'engine' => $redisEngine,
     'server' => $redisServer,
     'duration' => '+1 week',
