@@ -1,0 +1,272 @@
+2018-05-16 18:42:25 Error: [Cake\View\Exception\MissingTemplateException] Template file "Error/error500.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Error/error500.ctp',
+)
+Request URL: /api-gateway/end-points
+Stack Trace:
+#0 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/View/View.php(799): Cake\View\View->_getViewFileName('Error/error500')
+#1 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(370): Cake\View\View->render('error500', 'error')
+#2 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(335): Cake\Error\ExceptionRenderer->_outputMessageSafe('error500')
+#3 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(338): Cake\Error\ExceptionRenderer->_outputMessage('error500')
+#4 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(205): Cake\Error\ExceptionRenderer->_outputMessage('invalidArgument')
+#5 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(118): Cake\Error\ExceptionRenderer->render()
+#6 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(100): Cake\Error\Middleware\ErrorHandlerMiddleware->handleException(Object(InvalidArgumentException), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#11 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(493): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#12 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/api-gateway/en...', 'GET')
+#13 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/tests/TestCase/Controller/EndPointsControllerTest.php(15): Cake\TestSuite\IntegrationTestCase->get('/api-gateway/en...')
+#14 [internal function]: ApiGateway\Test\TestCase\Controller\EndPointsControllerTest->testIndex()
+#15 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(1072): ReflectionMethod->invokeArgs(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest), Array)
+#16 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(940): PHPUnit\Framework\TestCase->runTest()
+#17 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#18 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(895): PHPUnit\Framework\TestResult->run(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest))
+#19 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#20 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(546): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#22 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#23 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#24 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#25 {main}
+
+
+2018-05-16 18:45:23 Error: [Cake\View\Exception\MissingTemplateException] Template file "Error/error500.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Error/error500.ctp',
+)
+Request URL: /api-gateway/end-points
+Stack Trace:
+#0 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/View/View.php(799): Cake\View\View->_getViewFileName('Error/error500')
+#1 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(370): Cake\View\View->render('error500', 'error')
+#2 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(335): Cake\Error\ExceptionRenderer->_outputMessageSafe('error500')
+#3 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(338): Cake\Error\ExceptionRenderer->_outputMessage('error500')
+#4 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(205): Cake\Error\ExceptionRenderer->_outputMessage('invalidArgument')
+#5 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(118): Cake\Error\ExceptionRenderer->render()
+#6 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(100): Cake\Error\Middleware\ErrorHandlerMiddleware->handleException(Object(InvalidArgumentException), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#11 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(493): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#12 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/api-gateway/en...', 'GET')
+#13 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/tests/TestCase/Controller/EndPointsControllerTest.php(15): Cake\TestSuite\IntegrationTestCase->get('/api-gateway/en...')
+#14 [internal function]: ApiGateway\Test\TestCase\Controller\EndPointsControllerTest->testIndex()
+#15 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(1072): ReflectionMethod->invokeArgs(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest), Array)
+#16 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(940): PHPUnit\Framework\TestCase->runTest()
+#17 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#18 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(895): PHPUnit\Framework\TestResult->run(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest))
+#19 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#20 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(546): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#22 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#23 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#24 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#25 {main}
+
+
+2018-05-16 18:46:49 Error: [Cake\View\Exception\MissingTemplateException] Template file "Error/error500.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Error/error500.ctp',
+)
+Request URL: /api-gateway/end-points
+Stack Trace:
+#0 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/View/View.php(799): Cake\View\View->_getViewFileName('Error/error500')
+#1 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(370): Cake\View\View->render('error500', 'error')
+#2 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(335): Cake\Error\ExceptionRenderer->_outputMessageSafe('error500')
+#3 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(338): Cake\Error\ExceptionRenderer->_outputMessage('error500')
+#4 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(205): Cake\Error\ExceptionRenderer->_outputMessage('invalidArgument')
+#5 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(118): Cake\Error\ExceptionRenderer->render()
+#6 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(100): Cake\Error\Middleware\ErrorHandlerMiddleware->handleException(Object(InvalidArgumentException), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#11 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(493): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#12 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/api-gateway/en...', 'GET')
+#13 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/tests/TestCase/Controller/EndPointsControllerTest.php(15): Cake\TestSuite\IntegrationTestCase->get('/api-gateway/en...')
+#14 [internal function]: ApiGateway\Test\TestCase\Controller\EndPointsControllerTest->testIndex()
+#15 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(1072): ReflectionMethod->invokeArgs(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest), Array)
+#16 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(940): PHPUnit\Framework\TestCase->runTest()
+#17 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#18 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(895): PHPUnit\Framework\TestResult->run(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest))
+#19 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#20 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(546): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#22 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#23 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#24 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#25 {main}
+
+
+2018-05-16 18:47:17 Error: [Cake\View\Exception\MissingTemplateException] Template file "Error/error500.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Error/error500.ctp',
+)
+Request URL: /api-gateway/end-points
+Stack Trace:
+#0 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/View/View.php(799): Cake\View\View->_getViewFileName('Error/error500')
+#1 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(370): Cake\View\View->render('error500', 'error')
+#2 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(335): Cake\Error\ExceptionRenderer->_outputMessageSafe('error500')
+#3 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(338): Cake\Error\ExceptionRenderer->_outputMessage('error500')
+#4 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(205): Cake\Error\ExceptionRenderer->_outputMessage('invalidArgument')
+#5 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(118): Cake\Error\ExceptionRenderer->render()
+#6 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(100): Cake\Error\Middleware\ErrorHandlerMiddleware->handleException(Object(InvalidArgumentException), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#11 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(493): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#12 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/api-gateway/en...', 'GET')
+#13 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/tests/TestCase/Controller/EndPointsControllerTest.php(15): Cake\TestSuite\IntegrationTestCase->get('/api-gateway/en...')
+#14 [internal function]: ApiGateway\Test\TestCase\Controller\EndPointsControllerTest->testIndex()
+#15 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(1072): ReflectionMethod->invokeArgs(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest), Array)
+#16 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(940): PHPUnit\Framework\TestCase->runTest()
+#17 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#18 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(895): PHPUnit\Framework\TestResult->run(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest))
+#19 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#20 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(546): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#22 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#23 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#24 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#25 {main}
+
+
+2018-05-16 18:50:35 Error: [Cake\View\Exception\MissingTemplateException] Template file "Error/error500.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Error/error500.ctp',
+)
+Request URL: /end-points
+Stack Trace:
+#0 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/View/View.php(799): Cake\View\View->_getViewFileName('Error/error500')
+#1 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(370): Cake\View\View->render('error500', 'error')
+#2 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(335): Cake\Error\ExceptionRenderer->_outputMessageSafe('error500')
+#3 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(338): Cake\Error\ExceptionRenderer->_outputMessage('error500')
+#4 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(205): Cake\Error\ExceptionRenderer->_outputMessage('invalidArgument')
+#5 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(118): Cake\Error\ExceptionRenderer->render()
+#6 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(100): Cake\Error\Middleware\ErrorHandlerMiddleware->handleException(Object(InvalidArgumentException), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#11 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(493): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#12 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/end-points', 'GET')
+#13 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/tests/TestCase/Controller/EndPointsControllerTest.php(15): Cake\TestSuite\IntegrationTestCase->get('/end-points')
+#14 [internal function]: ApiGateway\Test\TestCase\Controller\EndPointsControllerTest->testIndex()
+#15 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(1072): ReflectionMethod->invokeArgs(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest), Array)
+#16 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(940): PHPUnit\Framework\TestCase->runTest()
+#17 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#18 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(895): PHPUnit\Framework\TestResult->run(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest))
+#19 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#20 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(546): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#22 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#23 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#24 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#25 {main}
+
+
+2018-05-16 18:51:29 Error: [Cake\View\Exception\MissingTemplateException] Template file "Error/error500.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Error/error500.ctp',
+)
+Request URL: /end-points
+Stack Trace:
+#0 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/View/View.php(799): Cake\View\View->_getViewFileName('Error/error500')
+#1 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(370): Cake\View\View->render('error500', 'error')
+#2 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(335): Cake\Error\ExceptionRenderer->_outputMessageSafe('error500')
+#3 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(338): Cake\Error\ExceptionRenderer->_outputMessage('error500')
+#4 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(205): Cake\Error\ExceptionRenderer->_outputMessage('invalidArgument')
+#5 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(118): Cake\Error\ExceptionRenderer->render()
+#6 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(100): Cake\Error\Middleware\ErrorHandlerMiddleware->handleException(Object(InvalidArgumentException), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#11 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(493): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#12 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/end-points', 'GET')
+#13 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/tests/TestCase/Controller/EndPointsControllerTest.php(15): Cake\TestSuite\IntegrationTestCase->get('/end-points')
+#14 [internal function]: ApiGateway\Test\TestCase\Controller\EndPointsControllerTest->testIndex()
+#15 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(1072): ReflectionMethod->invokeArgs(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest), Array)
+#16 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(940): PHPUnit\Framework\TestCase->runTest()
+#17 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#18 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(895): PHPUnit\Framework\TestResult->run(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest))
+#19 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#20 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(546): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#22 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#23 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#24 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#25 {main}
+
+
+2018-05-16 18:51:48 Error: [Cake\View\Exception\MissingTemplateException] Template file "Error/error500.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Error/error500.ctp',
+)
+Request URL: /end-points
+Stack Trace:
+#0 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/View/View.php(799): Cake\View\View->_getViewFileName('Error/error500')
+#1 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(370): Cake\View\View->render('error500', 'error')
+#2 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(335): Cake\Error\ExceptionRenderer->_outputMessageSafe('error500')
+#3 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(338): Cake\Error\ExceptionRenderer->_outputMessage('error500')
+#4 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(205): Cake\Error\ExceptionRenderer->_outputMessage('invalidArgument')
+#5 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(118): Cake\Error\ExceptionRenderer->render()
+#6 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(100): Cake\Error\Middleware\ErrorHandlerMiddleware->handleException(Object(InvalidArgumentException), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#11 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(493): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#12 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/end-points', 'GET')
+#13 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/tests/TestCase/Controller/EndPointsControllerTest.php(15): Cake\TestSuite\IntegrationTestCase->get('/end-points')
+#14 [internal function]: ApiGateway\Test\TestCase\Controller\EndPointsControllerTest->testIndex()
+#15 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(1072): ReflectionMethod->invokeArgs(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest), Array)
+#16 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(940): PHPUnit\Framework\TestCase->runTest()
+#17 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#18 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(895): PHPUnit\Framework\TestResult->run(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest))
+#19 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#20 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(546): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#22 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#23 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#24 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#25 {main}
+
+
+2018-05-16 18:54:17 Error: [Cake\View\Exception\MissingTemplateException] Template file "Error/error500.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Error/error500.ctp',
+)
+Request URL: /end-points
+Stack Trace:
+#0 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/View/View.php(799): Cake\View\View->_getViewFileName('Error/error500')
+#1 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(370): Cake\View\View->render('error500', 'error')
+#2 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(335): Cake\Error\ExceptionRenderer->_outputMessageSafe('error500')
+#3 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(338): Cake\Error\ExceptionRenderer->_outputMessage('error500')
+#4 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/ExceptionRenderer.php(205): Cake\Error\ExceptionRenderer->_outputMessage('invalidArgument')
+#5 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(118): Cake\Error\ExceptionRenderer->render()
+#6 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(100): Cake\Error\Middleware\ErrorHandlerMiddleware->handleException(Object(InvalidArgumentException), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/Http/Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(97): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#11 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(493): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#12 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/end-points', 'GET')
+#13 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/tests/TestCase/Controller/EndPointsControllerTest.php(16): Cake\TestSuite\IntegrationTestCase->get('/end-points')
+#14 [internal function]: ApiGateway\Test\TestCase\Controller\EndPointsControllerTest->testIndex()
+#15 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(1072): ReflectionMethod->invokeArgs(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest), Array)
+#16 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(940): PHPUnit\Framework\TestCase->runTest()
+#17 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#18 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestCase.php(895): PHPUnit\Framework\TestResult->run(Object(ApiGateway\Test\TestCase\Controller\EndPointsControllerTest))
+#19 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#20 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(546): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#22 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#23 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#24 /Users/andrewguy/www/api-gateway/plugins/ApiGateway/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#25 {main}
+
+
