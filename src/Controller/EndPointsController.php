@@ -98,6 +98,8 @@ class EndPointsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $endPoint = $this->EndPoints->get($id);
         if ($this->EndPoints->delete($endPoint)) {
+            // clear methods cache
+            Cache::clearGroup('methods', 'methods');
             $this->Flash->success(__('The end point has been deleted.'));
         } else {
             $this->Flash->error(__('The end point could not be deleted. Please, try again.'));
