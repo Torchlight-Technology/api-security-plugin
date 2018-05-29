@@ -49,6 +49,8 @@ class EndPointsController extends AppController
 
             // Delete existing
             $this->EndPoints->deleteAll([]);
+            // clear methods cache
+            Cache::clearGroup('methods', 'methods');
 
             $request = $this->request->getData();
             $data = [];
@@ -68,8 +70,6 @@ class EndPointsController extends AppController
                 $endPoints = $this->EndPoints->newEntities($data);
                 if ($this->EndPoints->saveMany($endPoints)) {
                     $this->Flash->success(__('The end points has been saved.'));
-                    // clear methods cache
-                    Cache::clearGroup('methods', 'methods');
 
                     return $this->redirect(['action' => 'index']);
                 }
