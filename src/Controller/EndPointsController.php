@@ -46,7 +46,6 @@ class EndPointsController extends AppController
     public function add()
     {
         if ($this->request->is('post')) {
-            debug($this->request->getData());
 
             // Delete existing
             $this->EndPoints->deleteAll([]);
@@ -65,15 +64,21 @@ class EndPointsController extends AppController
 
             }
 
-            $endPoints = $this->EndPoints->newEntities($data);
-            if ($this->EndPoints->saveMany($endPoints)) {
-                $this->Flash->success(__('The end points has been saved.'));
-                // clear methods cache
-                Cache::clearGroup('methods', 'methods');
+            if(!empty($data)) {
+                $endPoints = $this->EndPoints->newEntities($data);
+                if ($this->EndPoints->saveMany($endPoints)) {
+                    $this->Flash->success(__('The end points has been saved.'));
+                    // clear methods cache
+                    Cache::clearGroup('methods', 'methods');
 
+                    return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('The end point could not be saved. Please, try again.'));
+            }
+            else {
+                $this->Flash->error(__('The end points were removed.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The end point could not be saved. Please, try again.'));
         }
 
         $resources = $this->MethodDiscovery->getResources();
