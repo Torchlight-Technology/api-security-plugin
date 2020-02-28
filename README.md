@@ -21,6 +21,11 @@ Load the plugin in the host app's config/bootstrap.php file:
 Plugin::load('ApiGateway', ['bootstrap' => true, 'routes' => true]);
 ```
 
+Add the namespace into the host app's composer.json file, in the autoload-dev section:
+```
+"ApiGateway\\Test\\": "vendor/torchlighttechnology/api-security-plugin/tests/"
+```
+
 
 Add the AwsAuthenticator Component in the host app's src/Controller/AppController.php:
 ```
