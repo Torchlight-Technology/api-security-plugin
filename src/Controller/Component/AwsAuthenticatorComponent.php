@@ -30,9 +30,9 @@ class AwsAuthenticatorComponent extends Component
             if(!empty($apiKey)) {
                 $clientApiKey = $apiKey[0];
 
-                $results = Cache::read('aws', 'api-keys');
+                $keys = Cache::read('aws', 'api-keys');
 
-                if(!$results) {
+                if(!$keys) {
                     $apiGateway = new ApiGatewayClient([
                         'region' => 'us-east-1',
                         'version' => 'latest',
@@ -41,13 +41,26 @@ class AwsAuthenticatorComponent extends Component
                             'secret' => env('AWS_SECRET_ACCESS_KEY')
                         ]
                     ]);
-                    $results = $apiGateway->getApiKeys(['includeValues' => true]);
 
-                    $results = $results['items'];
-                    Cache::write('aws', $results, 'api-keys');
+                    // getPaginator auto paginates through the results
+                    // https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/guide_paginators.html
+                    $results = $apiGateway->getPaginator('GetApiKeys', [
+                        'includeValues' => true
+                    ]);
+
+                    // store the paginated results in keys
+                    $keys = [];
+                    foreach ($results as $result) {
+                        $keys[] = $result['items'];
+                    }
+
+                    // flatten 'er up
+                    $keys = array_merge(...$keys);
+                    // write them to cache
+                    Cache::write('aws', $keys, 'api-keys');
                 }
-                //debug($results);
-                foreach($results as $awsApiKey) {
+                //debug($keys);
+                foreach($keys as $awsApiKey) {
                     if($awsApiKey['enabled'] === true && $awsApiKey['value'] == $clientApiKey) {
                         $authorized = true;
                         break;
