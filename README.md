@@ -46,8 +46,7 @@ bin/cake migrations migrate -p ApiGateway
 ApiGateway plugin uses the AWS API to retrieve the valid AWS API Gateway keys, and it uses Redis for caching method names and API calls. The plugin relies on environment variables to make the connection to Redis and AWS.
 The AWS environment variables you need to set are:
 ```
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
+ASSUME_ROLE_ARN
 ```
 The Redis environment variables you need to set are:
 ```
