@@ -8,6 +8,7 @@ use Cake\Event\Event;
 use Cake\ORM\TableRegistry;
 
 use Aws\ApiGateway\ApiGatewayClient;
+use App\Provider\AssumeRole;
 
 class AwsAuthenticatorComponent extends Component
 {
@@ -33,13 +34,11 @@ class AwsAuthenticatorComponent extends Component
                 $keys = Cache::read('aws', 'api-keys');
 
                 if(!$keys) {
+                    $provider = AssumeRole::getProvider();
                     $apiGateway = new ApiGatewayClient([
                         'region' => 'us-east-1',
                         'version' => 'latest',
-                        'credentials' => [
-                            'key' => env('AWS_ACCESS_KEY_ID'),
-                            'secret' => env('AWS_SECRET_ACCESS_KEY')
-                        ]
+                        'credentials' => $provider
                     ]);
 
                     // getPaginator auto paginates through the results
