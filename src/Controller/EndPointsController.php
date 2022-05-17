@@ -3,6 +3,8 @@ namespace ApiGateway\Controller;
 
 use ApiGateway\Controller\AppController;
 use Cake\Cache\Cache;
+use Cake\Datasource\Exception\RecordNotFoundException;
+use Cake\Http\Response;
 
 /**
  * EndPoints Controller
@@ -14,7 +16,7 @@ class EndPointsController extends AppController
 {
 
 
-    public function initialize() {
+    public function initialize(): void {
         parent::initialize();
         $this->loadComponent('ApiGateway.MethodDiscovery');
     }
@@ -28,9 +30,9 @@ class EndPointsController extends AppController
     /**
      * Index method
      *
-     * @return \Cake\Http\Response|void
+     * @return void
      */
-    public function index()
+    public function index(): void
     {
         $endPoints = $this->paginate($this->EndPoints);
 
@@ -41,7 +43,7 @@ class EndPointsController extends AppController
     /**
      * Add method
      *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
+     * @return Response|null Redirects on successful add, renders view otherwise.
      */
     public function add()
     {
@@ -90,13 +92,12 @@ class EndPointsController extends AppController
         $this->set(compact('resources', 'endPoints'));
     }
 
-    
+
     /**
      * Delete method
      *
-     * @param string|null $id End Point id.
-     * @return \Cake\Http\Response|null Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     * @param null $id End Point id.
+     * @return Response|null Redirects to index.
      */
     public function delete($id = null)
     {

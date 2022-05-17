@@ -1,4 +1,6 @@
 <?php
+use Cake\View\View;
+
 /**
  * @var \App\View\AppView $this
  * @var \Cake\Datasource\EntityInterface $endPoint
@@ -22,11 +24,11 @@
                     $checked = true;
                 }
 
-                echo $this->Form->control('methods['.$controller.']['.$methodName.']', 
+                echo $this->Form->control('methods['.$controller.']['.$methodName.']',
                     [
-                        'type' => 'checkbox', 
-                        'label' => $methodName, 
-                        'value' => 1, 
+                        'type' => 'checkbox',
+                        'label' => $methodName,
+                        'value' => 1,
                         'checked' => $checked
                     ]
                 );

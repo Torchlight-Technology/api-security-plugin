@@ -29,7 +29,7 @@ class EndPointsTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config)
+    public function initialize(array $config): void
     {
         parent::initialize($config);
 
@@ -46,23 +46,23 @@ class EndPointsTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
+    public function validationDefault(Validator $validator): \Cake\Validation\Validator
     {
         $validator
             ->integer('id')
-            ->allowEmpty('id', 'create');
+            ->allowEmptyString('id', 'create');
 
         $validator
             ->scalar('controller')
             ->maxLength('controller', 64)
             ->requirePresence('controller', 'create')
-            ->notEmpty('controller');
+            ->notEmptyString('controller');
 
         $validator
             ->scalar('method')
             ->maxLength('method', 64)
             ->requirePresence('method', 'create')
-            ->notEmpty('method');
+            ->notEmptyString('method');
 
         return $validator;
     }

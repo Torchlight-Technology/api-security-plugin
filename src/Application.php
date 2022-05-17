@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -13,11 +15,19 @@
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
 namespace ApiGateway;
+
 use Cake\Core\Configure;
+use Cake\Core\ContainerInterface;
+use Cake\Datasource\FactoryLocator;
 use Cake\Error\Middleware\ErrorHandlerMiddleware;
 use Cake\Http\BaseApplication;
+use Cake\Http\Middleware\BodyParserMiddleware;
+use Cake\Http\Middleware\CsrfProtectionMiddleware;
+use Cake\Http\MiddlewareQueue;
+use Cake\ORM\Locator\TableLocator;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
+
 /**
  * Application setup class.
  *
@@ -27,18 +37,51 @@ use Cake\Routing\Middleware\RoutingMiddleware;
 class Application extends BaseApplication
 {
     /**
+     * Load all the application configuration and bootstrap logic.
+     *
+     * @return void
+     */
+    public function bootstrap(): void
+    {
+        // Call parent to load bootstrap from files.
+        parent::bootstrap();
+
+        $this->addPlugin('ApiGateway', ['bootstrap' => true, 'routes' => true, 'path' => ROOT]);
+
+        if (PHP_SAPI === 'cli') {
+            $this->bootstrapCli();
+        } else {
+            FactoryLocator::add(
+                'Table',
+                (new TableLocator())->allowFallbackClass(false)
+            );
+        }
+
+    }
+    /**
      * Setup the middleware queue your application will use.
      *
      * @param \Cake\Http\MiddlewareQueue $middlewareQueue The middleware queue to setup.
      * @return \Cake\Http\MiddlewareQueue The updated middleware queue.
      */
-    public function middleware($middlewareQueue)
+    public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
         $middlewareQueue
             // Handle plugin/theme assets like CakePHP normally does.
             ->add(AssetMiddleware::class)
             // Add routing middleware.
-            ->add(new RoutingMiddleware($this));
+            ->add(new RoutingMiddleware($this))
+
+            ->add(new BodyParserMiddleware());
+
         return $middlewareQueue;
+    }
+
+    protected function bootstrapCli(): void
+    {
+
+        $this->addPlugin('Migrations');
+
+        // Load more plugins here
     }
 }

@@ -24,7 +24,7 @@ class EndPointsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'plugin.api_gateway.end_points'
+        'plugin.ApiGateway.EndPoints'
     ];
 
     /**
@@ -32,11 +32,11 @@ class EndPointsTableTest extends TestCase
      *
      * @return void
      */
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
-        $config = TableRegistry::exists('EndPoints') ? [] : ['className' => EndPointsTable::class];
-        $this->EndPoints = TableRegistry::get('EndPoints', $config);
+        $config = $this->getTableLocator()->exists('EndPoints') ? [] : ['className' => EndPointsTable::class];
+        $this->EndPoints = $this->getTableLocator()->get('EndPoints', $config);
     }
 
     /**
@@ -44,7 +44,7 @@ class EndPointsTableTest extends TestCase
      *
      * @return void
      */
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->EndPoints);
 
