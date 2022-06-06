@@ -166,7 +166,6 @@ MutableDate::setTestNow(MutableDate::now());
 ini_set('intl.default_locale', 'en_US');
 ini_set('session.gc_divisor', '1');
 
-loadPHPUnitAliases();
 
 // Fixate sessionid early on, as php7.2+
 // does not allow the sessionid to be set after stdout
@@ -358,4 +357,4 @@ session_id('cli');
 
 // // finally load/register the plugin using a custom path
 
-Plugin::load('ApiGateway', ['bootstrap' => true, 'routes' => true, 'path' => ROOT]);
+//Plugin::load('ApiGateway', ['bootstrap' => true, 'routes' => true, 'path' => ROOT]);

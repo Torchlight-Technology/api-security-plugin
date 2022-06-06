@@ -5,6 +5,7 @@ use Cake\Cache\Cache;
 use Cake\Controller\Component;
 use Cake\Controller\Exception\AuthSecurityException;
 use Cake\Event\Event;
+use Cake\ORM\Locator\LocatorAwareTrait;
 use Cake\ORM\TableRegistry;
 
 use Aws\ApiGateway\ApiGatewayClient;
@@ -12,13 +13,14 @@ use App\Provider\AssumeRole;
 
 class AwsAuthenticatorComponent extends Component
 {
-    public function beforeFilter(Event $event) {
+    use LocatorAwareTrait;
+    public function beforeFilter(\Cake\Event\EventInterface $event) {
         // Check to see if requested endpoint is one under ApiGateway control
         $request = $event->getSubject()->request;
         $controller = $request->getParam('controller');
         $method = $request->getParam('action');
 
-        $endPointsTable = TableRegistry::get('ApiGateway.EndPoints');
+        $endPointsTable = $this->fetchTable('ApiGateway.EndPoints');
 
         $isProtected = $endPointsTable->isMethodProtected($controller, $method);
 
