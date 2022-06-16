@@ -22,15 +22,15 @@ class EndPointsController extends AppController
     }
 
     public function clearCache(string $group, string $config = 'api-keys') {
-            Cache::clearGroup($group, $config);
-            $this->Flash->success(__('The cache has been cleared.'));
-            $this->redirect(['action' => 'index']);
+        Cache::clearGroup($group, $config);
+        $this->Flash->success(__('The cache has been cleared.'));
+        $this->redirect(['action' => 'index']);
     }
 
     /**
      * Index method
      *
-     * @return void
+     * @return \Cake\Http\Response|void
      */
     public function index(): void
     {
@@ -43,7 +43,7 @@ class EndPointsController extends AppController
     /**
      * Add method
      *
-     * @return Response|null Redirects on successful add, renders view otherwise.
+     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
     public function add()
     {
@@ -96,8 +96,9 @@ class EndPointsController extends AppController
     /**
      * Delete method
      *
-     * @param null $id End Point id.
-     * @return Response|null Redirects to index.
+     * @param string|null $id End Point id.
+     * @return \Cake\Http\Response|null Redirects to index.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function delete($id = null)
     {
