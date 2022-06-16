@@ -14,15 +14,16 @@ use App\Provider\AssumeRole;
 class AwsAuthenticatorComponent extends Component
 {
     use LocatorAwareTrait;
-    public function beforeFilter(\Cake\Event\EventInterface $event) {
+
+    public function beforeFilter(Event $event) {
         // Check to see if requested endpoint is one under ApiGateway control
-        $request = $event->getSubject()->request;
-        $controller = $request->getParam('controller');
-        $method = $request->getParam('action');
 
-        $endPointsTable = $this->fetchTable('ApiGateway.EndPoints');
+        $controller = $this->_registry->getController()->getName();
+        $method = $this->_registry->getController()->getAction();
 
-        $isProtected = $endPointsTable->isMethodProtected($controller, $method);
+        $this->endPointsTable = $this->fetchTable('ApiGateway.EndPoints');
+
+        $isProtected = $this->endPointsTable->isMethodProtected($controller, $method);
 
         if($isProtected) {
             // Check AWS keys
